@@ -1,4 +1,4 @@
-#Real-Time Object Detection with YOLO + VLM
+# Real-Time Object Detection with YOLO + VLM
 
 This project demonstrates real-time object detection on CCTV feeds by combining YOLO and a Vision-Language Model (VLM) to achieve highly accurate filtering and labeling.
 
