@@ -2,28 +2,23 @@
 
 This project demonstrates real-time object detection on CCTV feeds by combining YOLO and a Vision-Language Model (VLM) to achieve highly accurate filtering and labeling.
 
-Overview
+Detection: Ultralytics YOLO models (people_model, gun_model), fused for speed.
+Tracking: supervision.ByteTrack per stream; side‑by‑side output for two feeds.
+Re‑ID (prototype): ResNet50 embedding head (Identity() final layer) + cosine similarity to link cam2 IDs to cam1.(you can add deepsort for more accurate tracking)
+Weapons heuristic: keyword filter and a dedicated YOLO weapon model.
+Moondream VLM: per‑crop Q&A to enrich labels/attributes (e.g., “is anyone holding a gun?”).ios.
 
-YOLO detects objects in video frames in real-time.
 
-VLM refines YOLO’s predictions, generating a JSONL dataset with more accurate labels for each frame.
+# Steps to run on colab:
 
-The JSONL output can be used to fine-tune YOLO models, improving detection accuracy on specific scenarios or environments.
+Just run the New notebook file on colab, runnng one cell after other, uploadt best.pt model, also your video for testing  or use the sample video shared
 
-Workflow
+You will need moondream key, get it from here https://moondream.ai/ and add it to colab secrets
 
-Real-Time Detection – YOLO processes CCTV feeds, identifying objects and generating initial frame annotations.
+download results and to view them.
 
-VLM Refinement – The VLM analyzes the detected frames, correcting mislabels and adding contextual details.
 
-Dataset Generation – The VLM outputs JSONL files mapping frames to refined labels.
 
-YOLO Fine-Tuning – Use the JSONL dataset to retrain YOLO for improved performance on the target data.
 
-Benefits
 
-Improved Accuracy: VLM helps correct errors and adds context YOLO may miss.
 
-Real-Time Performance: YOLO handles fast processing while VLM adds minimal overhead.
-
-Custom Dataset Creation: Easily generate high-quality labeled datasets for specialized scenarios.
