@@ -8,6 +8,7 @@ Re‑ID (prototype): ResNet50 embedding head (Identity() final layer) + cosine s
 Weapons heuristic: keyword filter and a dedicated YOLO weapon model.
 Moondream VLM: per‑crop Q&A to enrich labels/attributes (e.g., “is anyone holding a gun?”).ios.
 
+# read design thoughts for cooments and imporvement
 
 # Steps to run on colab:
 
