@@ -12,7 +12,7 @@ Moondream VLM: per‑crop Q&A to enrich labels/attributes (e.g., “is anyone ho
 
 # Steps to run on colab:
 
-Just run the New notebook file on colab, runnng one cell after other, uploadt best.pt model, also your video for testing  or use the sample video shared
+Just run the realtime detection notebook on colab, runnng one cell after other, uploadt best.pt model, also your video for testing  or use the sample video shared
 
 You will need moondream key, get it from here https://moondream.ai/ and add it to colab secrets
 
